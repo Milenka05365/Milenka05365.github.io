@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каталог автомобилей — Prime Auto | Тула</title>
+<meta name="description" content="Каталог автомобилей в наличии: седаны, кроссоверы, спорткары. Цены, характеристики, фото. Запись на тест-драйв.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
+        <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Главная</a>
+      <a href="catalog.html" class="nav__link active">Каталог</a>
+      <a href="services.html" class="nav__link">Услуги</a>
+      <a href="contacts.html" class="nav__link">Контакты</a>
+    </nav>
+    <a href="tel:+74872000000" class="header__phone">+7 (4872) 00-00-00</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label reveal">В наличии сегодня</p>
+    <h1 class="reveal">Каталог автомобилей</h1>
+    <p class="page-hero__subtitle reveal">Более 200 проверенных автомобилей</p>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="container">
+    <div class="catalog__filters reveal">
+      <button class="filter active" data-filter="all">Все</button>
+      <button class="filter" data-filter="sedan">Седаны</button>
+      <button class="filter" data-filter="suv">Кроссоверы</button>
+      <button class="filter" data-filter="sport">Спорткары</button>
+      <button class="filter" data-filter="electric">Электро</button>
+    </div>
+
+    <div class="catalog__grid">
+      <article class="car reveal" data-category="sport">
+        <div class="car__img" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80')">
+          <span class="car__badge">Хит продаж</span>
+        </div>
+        <div class="car__info">
+          <h3>Porsche 911 Carrera</h3>
+          <p class="car__specs">450 л.с. · 3.5 с · Автомат</p>
+          <div class="car__footer">
+            <span class="car__price">12 900 000 ₽</span>
+            <a href="contacts.html" class="car__btn">Записаться</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="car reveal" data-category="sedan">
+        <div class="car__img" style="background-image:url('https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="car__info">
+          <h3>BMW 5 Series</h3>
+          <p class="car__specs">249 л.с. · Полный привод · Автомат</p>
+          <div class="car__footer">
+            <span class="car__price">5 400 000 ₽</span>
+            <a href="contacts.html" class="car__btn">Записаться</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="car reveal" data-category="suv">
+        <div class="car__img" style="background-image:url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="car__info">
+          <h3>Audi Q7</h3>
+          <p class="car__specs">340 л.с. · Полный привод · 7 мест</p>
+          <div class="car__footer">
+            <span class="car__price">7 800 000 ₽</span>
+            <a href="contacts.html" class="car__btn">Записаться</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="car reveal" data-category="electric">
+        <div class="car__img" style="background-image:url('https://images.unsplash.com/photo-1617704548623-340376564e68?auto=format&fit=crop&w=1200&q=80')">
+          <span class="car__badge car__badge--green">Электро</span>
+        </div>
+        <div class="car__info">
+          <h3>Tesla Model S</h3>
+          <p class="car__specs">670 л.с. · 3.2 с · 630 км</p>
+          <div class="car__footer">
+            <span class="car__price">9 500 000 ₽</span>
+            <a href="contacts.html" class="car__btn">Записаться</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="car reveal" data-category="sedan">
+        <div class="car__img" style="background-image:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="car__info">
+          <h3>Mercedes E-Class</h3>
+          <p class="car__specs">249 л.с. · Задний привод · Автомат</p>
+          <div class="car__footer">
+            <span class="car__price">6 200 000 ₽</span>
+            <a href="contacts.html" class="car__btn">Записаться</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="car reveal" data-category="suv">
+        <div class="car__img" style="background-image:url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="car__info">
+          <h3>Volvo XC90</h3>
+          <p class="car__specs">300 л.с. · Полный привод · 7 мест</p>
+          <div class="car__footer">
+            <span class="car__price">7 100 000 ₽</span>
+            <a href="contacts.html" class="car__btn">Записаться</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col">
+      <a href="index.html" class="logo">
+        <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
+          <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+      </a>
+      <p class="footer__desc">Премиальный автосалон в Туле.</p>
+    </div>
+    <div class="footer__col"><h4>Навигация</h4><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="services.html">Услуги</a><a href="contacts.html">Контакты</a></div>
+    <div class="footer__col"><h4>Услуги</h4><a href="services.html">Trade-in</a><a href="services.html">Кредит</a><a href="services.html">Тест-драйв</a><a href="services.html">Страхование</a></div>
+    <div class="footer__col"><h4>Контакты</h4><p>г. Тула, пр. Ленина, 100</p><p><a href="tel:+74872000000">+7 (4872) 00-00-00</a></p><p>Ежедневно 09:00–21:00</p></div>
+  </div>
+  <div class="footer__bottom"><p>© 2025 Prime Auto. Все права защищены.</p></div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

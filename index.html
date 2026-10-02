@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Auto — Премиальный автосалон в Туле</title>
+<meta name="description" content="Автосалон Prime Auto в Туле. Новые и премиальные автомобили, тест-драйв, trade-in, кредит за один день. Более 200 машин в наличии.">
+<meta name="keywords" content="автосалон Тула, купить авто, премиум автомобили, тест-драйв, trade-in, кредит на авто">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  "name": "Prime Auto",
+  "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "проспект Ленина, 100",
+    "addressLocality": "Тула",
+    "postalCode": "300000",
+    "addressCountry": "RU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 54.196, "longitude": 37.618 },
+  "telephone": "+7 (4872) 00-00-00",
+  "openingHours": "Mo-Su 09:00-21:00",
+  "priceRange": "от 1 500 000 ₽",
+  "url": "https://ВАШ-ЛОГИН.github.io"
+}
+</script>
+</head>
+<body>
+
+<!-- Прелоадер -->
+<div class="preloader" id="preloader">
+  <svg class="preloader__logo" viewBox="0 0 100 100" width="80" height="80">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="#C8A45C" stroke-width="0.5"/>
+    <path d="M30 35 L50 25 L70 35 L70 65 L50 75 L30 65 Z" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<!-- Шапка -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo" aria-label="Prime Auto">
+      <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="#C8A45C" stroke-width="0.8" opacity="0.6"/>
+        <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo__text">
+        <span class="logo__title">Prime Auto</span>
+        <span class="logo__subtitle">Autosalon · Тула</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link active">Главная</a>
+      <a href="catalog.html" class="nav__link">Каталог</a>
+      <a href="services.html" class="nav__link">Услуги</a>
+      <a href="contacts.html" class="nav__link">Контакты</a>
+    </nav>
+    <a href="tel:+74872000000" class="header__phone">+7 (4872) 00-00-00</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container hero__content">
+    <p class="hero__tagline reveal">Премиальный автосалон в Туле</p>
+    <h1 class="hero__title reveal">Ваш автомобиль<br><span>уже ждёт вас</span></h1>
+    <p class="hero__subtitle reveal">Более 200 автомобилей в наличии. Trade-in, кредит за один день, тест-драйв в любое время.</p>
+    <div class="hero__actions reveal">
+      <a href="catalog.html" class="btn btn--primary">Смотреть каталог</a>
+      <a href="contacts.html" class="btn btn--ghost">Записаться</a>
+    </div>
+    <div class="hero__stats reveal">
+      <div><strong>200+</strong><span>автомобилей в наличии</span></div>
+      <div><strong>15</strong><span>лет на рынке</span></div>
+      <div><strong>24/7</strong><span>поддержка клиентов</span></div>
+    </div>
+  </div>
+  <a href="#features" class="hero__scroll" aria-label="Прокрутить вниз">↓</a>
+</section>
+
+<!-- Преимущества -->
+<section class="features" id="features">
+  <div class="container">
+    <p class="section-label reveal">Наши преимущества</p>
+    <h2 class="section-title reveal">Почему выбирают нас</h2>
+    <div class="features__grid">
+      <div class="feature reveal">
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <h3>Проверенные автомобили</h3>
+        <p>Каждая машина проходит 150-точечную диагностику перед продажей.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Быстрое оформление</h3>
+        <p>Кредит, лизинг и trade-in за один день. Минимум документов.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M5 17a2 2 0 100 4 2 2 0 000-4zm14 0a2 2 0 100 4 2 2 0 000-4zM5 17V9l2-4h10l2 4v8"/></svg>
+        </div>
+        <h3>Тест-драйв</h3>
+        <p>Любая модель из наличия доступна для тест-драйва в день обращения.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Гарантия и сервис</h3>
+        <p>Гарантия на все автомобили, собственный сервисный центр.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Популярные автомобили -->
+<section class="models">
+  <div class="container">
+    <p class="section-label reveal">В наличии сегодня</p>
+    <h2 class="section-title reveal">Популярные модели</h2>
+    <div class="models__grid">
+      <article class="model reveal">
+        <div class="model__img" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="model__info">
+          <span class="model__tag">Спорткар</span>
+          <h3>Porsche 911 Carrera</h3>
+          <p>450 л.с. · 3.5 с до 100 км/ч · Автомат</p>
+          <div class="model__footer">
+            <span class="model__price">от 12 900 000 ₽</span>
+            <a href="catalog.html" class="model__link">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+      <article class="model reveal">
+        <div class="model__img" style="background-image:url('https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="model__info">
+          <span class="model__tag">Седан</span>
+          <h3>BMW 5 Series</h3>
+          <p>249 л.с. · Полный привод · Автомат</p>
+          <div class="model__footer">
+            <span class="model__price">от 5 400 000 ₽</span>
+            <a href="catalog.html" class="model__link">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+      <article class="model reveal">
+        <div class="model__img" style="background-image:url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="model__info">
+          <span class="model__tag">Кроссовер</span>
+          <h3>Audi Q7</h3>
+          <p>340 л.с. · Полный привод · 7 мест</p>
+          <div class="model__footer">
+            <span class="model__price">от 7 800 000 ₽</span>
+            <a href="catalog.html" class="model__link">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="models__more reveal">
+      <a href="catalog.html" class="btn btn--ghost">Весь каталог →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container cta__inner">
+    <p class="section-label reveal">Следующий шаг</p>
+    <h2 class="reveal">Запишитесь на тест-драйв</h2>
+    <p class="reveal">Оставьте заявку — персональный менеджер свяжется с вами в течение 15 минут.</p>
+    <a href="contacts.html" class="btn btn--primary reveal">Записаться</a>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col">
+      <a href="index.html" class="logo">
+        <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
+          <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+      </a>
+      <p class="footer__desc">Премиальный автосалон в Туле. Более 200 автомобилей, trade-in, кредит за один день.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Навигация</h4>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="services.html">Услуги</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+    <div class="footer__col">
+      <h4>Услуги</h4>
+      <a href="services.html">Trade-in</a>
+      <a href="services.html">Кредит и лизинг</a>
+      <a href="services.html">Тест-драйв</a>
+      <a href="services.html">Страхование</a>
+    </div>
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <p>г. Тула, пр. Ленина, 100</p>
+      <p><a href="tel:+74872000000">+7 (4872) 00-00-00</a></p>
+      <p><a href="mailto:info@primeauto.ru">info@primeauto.ru</a></p>
+      <p>Ежедневно 09:00–21:00</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 Prime Auto. Все права защищены.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
