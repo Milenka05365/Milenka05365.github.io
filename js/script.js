@@ -131,3 +131,13 @@ if (scrollBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// === ЧАТ ===
+const chatBtn = document.getElementById('chatBtn');
+const chatWindow = document.getElementById('chatWindow');
+const closeChat = document.getElementById('closeChat');
+
+if (chatBtn && chatWindow && closeChat) {
+  chatBtn.addEventListener('click', () => chatWindow.classList.toggle('active'));
+  closeChat.addEventListener('click', () => chatWindow.classList.remove('active'));
+}
