@@ -15,17 +15,25 @@ if (header) {
 /* Бургер-меню */
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
+
 if (burger && nav) {
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     nav.classList.toggle('active');
-    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+  
+    if (nav.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   });
+  
+  // Закрываем меню при клике на ссылку
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       burger.classList.remove('active');
       nav.classList.remove('active');
-      document.body.style.overflow = '';
+      document.body.style.overflow = ''; // Возвращаем прокрутку
     });
   });
 }
