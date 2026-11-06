@@ -274,6 +274,21 @@ section { padding: 120px 0; }
   .contacts__map { height: 400px; }
   .cta__inner { padding: 70px 30px; margin: 0 16px; }
   .footer__inner { grid-template-columns: 1fr; gap: 36px; }
+  .btn, .car__btn, .header__phone {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  .model__info, .car__info {
+    padding: 24px 20px;
+  }
+  .model__info h3, .car__info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 560px) {
   .container { padding: 0 18px; }
