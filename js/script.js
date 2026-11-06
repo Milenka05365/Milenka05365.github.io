@@ -100,3 +100,22 @@ if (window.innerWidth > 900) {
     card.addEventListener('mouseleave', () => card.style.transform = '');
   });
 }
+
+// === POPUP ЛОГИКА ===
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('popupOverlay');
+  const closeBtn = document.getElementById('popupClose');
+  
+  if (overlay && closeBtn) {
+    // Показываем через 30 секунд
+    setTimeout(() => {
+      overlay.classList.add('active');
+    }, 30000);
+
+    // Закрытие
+    closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.classList.remove('active');
+    });
+  }
+});
