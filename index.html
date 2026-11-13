@@ -9,25 +9,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://milenka05365.github.io/">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AutoDealer",
   "name": "Prime Auto",
-  "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+  "image": "https://milenka05365.github.io/images/prime-auto-showroom.webp",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "проспект Ленина, 100",
     "addressLocality": "Тула",
-    "postalCode": "300000",
     "addressCountry": "RU"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 54.196, "longitude": 37.618 },
+  "geo": { "@type": "GeoCoordinates", "latitude": 54.162684, "longitude": 37.586086 },
   "telephone": "+7 (4872) 00-00-00",
   "openingHours": "Mo-Su 09:00-21:00",
   "priceRange": "от 1 500 000 ₽",
-  "url": "https://ВАШ-ЛОГИН.github.io"
+  "url": "https://milenka05365.github.io/"
 }
 </script>
 
@@ -42,94 +42,147 @@
 
     ym(114107813, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
-<!-- Прелоадер -->
-<div class="preloader" id="preloader">
-  <svg class="preloader__logo" viewBox="0 0 100 100" width="80" height="80">
-    <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2"/>
-    <circle cx="50" cy="50" r="38" fill="none" stroke="#C8A45C" stroke-width="0.5"/>
-    <path d="M30 35 L50 25 L70 35 L70 65 L50 75 L30 65 Z" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linejoin="round"/>
-  </svg>
-</div>
-
-<!-- Шапка -->
+<a href="#main-content" class="skip-link">Перейти к содержанию</a>
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo" aria-label="Prime Auto">
-      <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+      <svg class="logo__icon" aria-hidden="true" viewBox="0 0 100 100" width="42" height="42">
         <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
         <circle cx="50" cy="50" r="38" fill="none" stroke="#C8A45C" stroke-width="0.8" opacity="0.6"/>
         <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
       </svg>
       <span class="logo__text">
         <span class="logo__title">Prime Auto</span>
-        <span class="logo__subtitle">Autosalon · Тула</span>
+        <span class="logo__subtitle">Автосалон · Тула</span>
       </span>
     </a>
-    <nav class="nav" id="nav">
-  <a href="index.html" class="nav__link">Главная</a>
-  <a href="catalog.html" class="nav__link">Каталог</a>
-  <a href="services.html" class="nav__link">Услуги</a>
-  <a href="about.html" class="nav__link">О нас</a> <!-- ДОБАВИТЬ ЭТО -->
-  <a href="contacts.html" class="nav__link">Контакты</a>
-</nav>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="index.html" class="nav__link" aria-current="page">Главная</a>
+      <a href="catalog.html" class="nav__link">Каталог</a>
+      <a href="services.html" class="nav__link">Услуги</a>
+      <a href="about.html" class="nav__link">О нас</a>
+      <a href="blog.html" class="nav__link">Блог</a>
+      <a href="contacts.html" class="nav__link">Контакты</a>
+    </nav>
     <a href="tel:+74872000000" class="header__phone">+7 (4872) 00-00-00</a>
-    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main id="main-content" tabindex="-1">
+
 <!-- Hero -->
 <section class="hero">
-  <div class="hero__bg"></div>
+  <picture class="hero__media" aria-hidden="true">
+    <source media="(max-width: 700px)" srcset="images/prime-auto-showroom-mobile.webp">
+    <img src="images/prime-auto-showroom.webp" width="1600" height="800" alt="" fetchpriority="high">
+  </picture>
   <div class="container hero__content">
-    <p class="hero__tagline reveal">Премиальный автосалон в Туле</p>
-    <h1 class="hero__title reveal">Ваш автомобиль<br><span>уже ждёт вас</span></h1>
-    <p class="hero__subtitle reveal">Более 200 автомобилей в наличии. Trade-in, кредит за один день, тест-драйв в любое время.</p>
-    <div class="hero__actions reveal">
+    <p class="section-label hero__tagline">Премиальный автосалон в Туле</p>
+    <h1 class="hero__title">Ваш автомобиль<br><span>уже ждёт вас</span></h1>
+    <p class="hero__subtitle">Новые автомобили и модели с пробегом. Подберите машину, узнайте условия trade-in и запишитесь на тест-драйв.</p>
+    <div class="hero__actions">
       <a href="catalog.html" class="btn btn--primary">Смотреть каталог</a>
-      <a href="contacts.html" class="btn btn--ghost">Записаться</a>
-    </div>
-    <div class="hero__stats reveal">
-      <div><strong>200+</strong><span>автомобилей в наличии</span></div>
-      <div><strong>15</strong><span>лет на рынке</span></div>
-      <div><strong>24/7</strong><span>поддержка клиентов</span></div>
+      <a href="contacts.html#test-drive" class="btn btn--ghost">Тест-драйв</a>
     </div>
   </div>
-  <a href="#features" class="hero__scroll" aria-label="Прокрутить вниз">↓</a>
+</section>
+
+<!-- Популярные автомобили -->
+<section class="models">
+  <div class="container">
+    <p class="section-label">В наличии сегодня</p>
+    <h2 class="section-title">Популярные модели</h2>
+    <div class="models__grid">
+
+      <!-- Машина 1: Porsche -->
+      <article class="model">
+        <div class="model__img">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Porsche 911 Carrera" decoding="async">
+        </div>
+        <div class="model__info">
+          <span class="model__tag">Спорткар</span>
+          <h3>Porsche 911 Carrera</h3>
+          <p>450 л.с. · 3.5 с до 100 км/ч · Автомат</p>
+          <div class="model__footer">
+            <span class="model__price">от 12 900 000 ₽</span>
+            <a href="catalog.html#porsche-911" class="model__link" aria-label="Подробнее о Porsche 911 Carrera">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Машина 2: BMW -->
+      <article class="model">
+        <div class="model__img">
+          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="BMW 5 Series" decoding="async">
+        </div>
+        <div class="model__info">
+          <span class="model__tag">Седан</span>
+          <h3>BMW 5 Series</h3>
+          <p>249 л.с. · Полный привод · Автомат</p>
+          <div class="model__footer">
+            <span class="model__price">от 5 400 000 ₽</span>
+            <a href="catalog.html#bmw-5" class="model__link" aria-label="Подробнее о BMW 5 Series">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Машина 3: Audi -->
+      <article class="model">
+        <div class="model__img">
+          <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Audi Q7" decoding="async">
+        </div>
+        <div class="model__info">
+          <span class="model__tag">Кроссовер</span>
+          <h3>Audi Q7</h3>
+          <p>340 л.с. · Полный привод · 7 мест</p>
+          <div class="model__footer">
+            <span class="model__price">от 7 800 000 ₽</span>
+            <a href="catalog.html#audi-q7" class="model__link" aria-label="Подробнее о Audi Q7">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div class="models__more">
+      <a href="catalog.html" class="btn btn--ghost">Весь каталог →</a>
+    </div>
+  </div>
 </section>
 
 <!-- Преимущества -->
 <section class="features" id="features">
   <div class="container">
-    <p class="section-label reveal">Наши преимущества</p>
-    <h2 class="section-title reveal">Почему выбирают нас</h2>
+    <p class="section-label">Наши преимущества</p>
+    <h2 class="section-title">Почему выбирают нас</h2>
     <div class="features__grid">
-      <div class="feature reveal">
+      <div class="feature">
         <div class="feature__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
         </div>
         <h3>Проверенные автомобили</h3>
         <p>Каждая машина проходит 150-точечную диагностику перед продажей.</p>
       </div>
-      <div class="feature reveal">
+      <div class="feature">
         <div class="feature__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         </div>
         <h3>Быстрое оформление</h3>
         <p>Кредит, лизинг и trade-in за один день. Минимум документов.</p>
       </div>
-      <div class="feature reveal">
+      <div class="feature">
         <div class="feature__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M5 17a2 2 0 100 4 2 2 0 000-4zm14 0a2 2 0 100 4 2 2 0 000-4zM5 17V9l2-4h10l2 4v8"/></svg>
         </div>
         <h3>Тест-драйв</h3>
         <p>Любая модель из наличия доступна для тест-драйва в день обращения.</p>
       </div>
-      <div class="feature reveal">
+      <div class="feature">
         <div class="feature__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
         </div>
@@ -140,22 +193,22 @@
   </div>
 </section>
 
-  <!-- НОВЫЙ БЛОК: Отзывы и гарантии -->
+<!-- Отзывы и гарантии -->
 <section class="reviews" style="padding: 80px 0; background: var(--bg);">
   <div class="container">
-    <p class="section-label reveal">Нам доверяют</p>
-    <h2 class="section-title reveal">Отзывы наших клиентов</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
+    <p class="section-label">Нам доверяют</p>
+    <h2 class="section-title">Отзывы наших клиентов</h2>
+
+    <div class="reviews__grid">
       <!-- Отзыв 1 -->
-      <div class="feature reveal" style="padding: 30px;">
+      <div class="feature" style="padding: 30px;">
         <p style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</p>
         <p style="color: var(--text); font-style: italic; margin-bottom: 20px;">«Купил BMW 5 Series. Очень доволен подходом! Помогли с кредитом за 1 час, сделали скидку. Рекомендую!»</p>
         <p style="color: var(--text-muted); font-weight: 600;">— Дмитрий, Тула</p>
       </div>
-      
+
       <!-- Отзыв 2 -->
-      <div class="feature reveal" style="padding: 30px;">
+      <div class="feature" style="padding: 30px;">
         <p style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</p>
         <p style="color: var(--text); font-style: italic; margin-bottom: 20px;">«Отличный салон. Брали Audi Q7 в семью. Понравилось, что все документы оформили на месте и сделали полную диагностику.»</p>
         <p style="color: var(--text-muted); font-weight: 600;">— Елена, Тульская область</p>
@@ -171,79 +224,19 @@
   </div>
 </section>
 
-<!-- Популярные автомобили -->
-<section class="models">
-  <div class="container">
-    <p class="section-label reveal">В наличии сегодня</p>
-    <h2 class="section-title reveal">Популярные модели</h2>
-        <div class="models__grid">
-      
-      <!-- Машина 1: Porsche -->
-      <article class="model reveal">
-        <div class="model__img">
-          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Porsche 911 Carrera" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div class="model__info">
-          <span class="model__tag">Спорткар</span>
-          <h3>Porsche 911 Carrera</h3>
-          <p>450 л.с. · 3.5 с до 100 км/ч · Автомат</p>
-          <div class="model__footer">
-            <span class="model__price">от 12 900 000 ₽</span>
-            <a href="catalog.html" class="model__link">Подробнее →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Машина 2: BMW -->
-      <article class="model reveal">
-        <div class="model__img">
-          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="BMW 5 Series" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div class="model__info">
-          <span class="model__tag">Седан</span>
-          <h3>BMW 5 Series</h3>
-          <p>249 л.с. · Полный привод · Автомат</p>
-          <div class="model__footer">
-            <span class="model__price">от 5 400 000 ₽</span>
-            <a href="catalog.html" class="model__link">Подробнее →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Машина 3: Audi -->
-      <article class="model reveal">
-        <div class="model__img">
-          <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Audi Q7" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div class="model__info">
-          <span class="model__tag">Кроссовер</span>
-          <h3>Audi Q7</h3>
-          <p>340 л.с. · Полный привод · 7 мест</p>
-          <div class="model__footer">
-            <span class="model__price">от 7 800 000 ₽</span>
-            <a href="catalog.html" class="model__link">Подробнее →</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-    <div class="models__more reveal">
-      <a href="catalog.html" class="btn btn--ghost">Весь каталог →</a>
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="cta">
   <div class="container cta__inner">
-    <p class="section-label reveal">Следующий шаг</p>
-    <h2 class="reveal">Запишитесь на тест-драйв</h2>
-    <p class="reveal">Оставьте заявку — персональный менеджер свяжется с вами в течение 15 минут.</p>
-    <a href="contacts.html" class="btn btn--primary reveal">Записаться</a>
+    <p class="section-label">Следующий шаг</p>
+    <h2>Запишитесь на тест-драйв</h2>
+    <p>Уточните наличие автомобиля и договоритесь об удобном времени визита.</p>
+    <a href="contacts.html#test-drive" class="btn btn--primary">Связаться с салоном</a>
   </div>
 </section>
 
 <!-- Подвал -->
+</main>
+
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__col">
@@ -252,7 +245,7 @@
           <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
           <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
         </svg>
-        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Автосалон · Тула</span></span>
       </a>
       <p class="footer__desc">Премиальный автосалон в Туле. Более 200 автомобилей, trade-in, кредит за один день.</p>
     </div>
@@ -265,10 +258,10 @@
     </div>
     <div class="footer__col">
       <h4>Услуги</h4>
-      <a href="services.html">Trade-in</a>
-      <a href="services.html">Кредит и лизинг</a>
-      <a href="services.html">Тест-драйв</a>
-      <a href="services.html">Страхование</a>
+      <a href="services.html#trade-in">Trade-in</a>
+      <a href="services.html#financing">Кредит и лизинг</a>
+      <a href="services.html#test-drive-service">Тест-драйв</a>
+      <a href="services.html#insurance">Страхование</a>
     </div>
     <div class="footer__col">
       <h4>Контакты</h4>
@@ -283,33 +276,8 @@
   </div>
 </footer>
 
-  <!-- Поп-ап форма -->
-<div class="popup-overlay" id="popupOverlay">
-  <div class="popup-content">
-    <button class="popup-close" id="popupClose">&times;</button>
-    <h2>Нужна консультация?</h2>
-    <p>Оставьте номер, и мы перезвоним в течение 15 минут.</p>
-    <form class="popup-form">
-      <input type="tel" placeholder="Ваш телефон" required>
-      <button type="submit" class="btn btn--primary">Жду звонка</button>
-    </form>
-  </div>
-</div>
-  <button id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
-
-  <!-- Виджет чата -->
-<div class="chat-widget" id="chatWidget">
-  <div class="chat-window" id="chatWindow">
-    <div class="chat-header">Менеджер Prime Auto <span id="closeChat">&times;</span></div>
-    <div class="chat-body">
-      <div class="chat-msg">Здравствуйте! Чем я могу вам помочь? Вы можете записаться на тест-драйв или узнать цену.</div>
-    </div>
-    <div class="chat-input"><input type="text" placeholder="Написать сообщение..."></div>
-  </div>
-  <button class="chat-btn" id="chatBtn">💬</button>
-</div>
-  
+  <button type="button" id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
 <script src="js/script.js"></script>
-  
+
 </body>
 </html>

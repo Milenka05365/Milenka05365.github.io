@@ -6,6 +6,7 @@
 <title>Услуги — Prime Auto | Trade-in, кредит, страхование</title>
 <meta name="description" content="Услуги автосалона Prime Auto в Туле: trade-in, кредит и лизинг, страхование, тест-драйв, помощь в оформлении.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://milenka05365.github.io/services.html">
 <link rel="stylesheet" href="css/style.css">
 
   <!-- Yandex.Metrika counter -->
@@ -19,46 +20,49 @@
 
     ym(114107813, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
+<a href="#main-content" class="skip-link">Перейти к содержанию</a>
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo">
-      <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+      <svg class="logo__icon" aria-hidden="true" viewBox="0 0 100 100" width="42" height="42">
         <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
         <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
       </svg>
-      <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+      <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Автосалон · Тула</span></span>
     </a>
-    <nav class="nav" id="nav">
-  <a href="index.html" class="nav__link">Главная</a>
-  <a href="catalog.html" class="nav__link">Каталог</a>
-  <a href="services.html" class="nav__link">Услуги</a>
-  <a href="about.html" class="nav__link">О нас</a> <!-- ДОБАВИТЬ ЭТО -->
-  <a href="contacts.html" class="nav__link">Контакты</a>
-</nav>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="index.html" class="nav__link">Главная</a>
+      <a href="catalog.html" class="nav__link">Каталог</a>
+      <a href="services.html" class="nav__link" aria-current="page">Услуги</a>
+      <a href="about.html" class="nav__link">О нас</a>
+      <a href="blog.html" class="nav__link">Блог</a>
+      <a href="contacts.html" class="nav__link">Контакты</a>
+    </nav>
     <a href="tel:+74872000000" class="header__phone">+7 (4872) 00-00-00</a>
-    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main id="main-content" tabindex="-1">
+
 <section class="page-hero">
   <div class="container">
-    <p class="section-label reveal">Что мы предлагаем</p>
-    <h1 class="reveal">Наши услуги</h1>
-    <p class="page-hero__subtitle reveal">Полный цикл обслуживания автомобиля</p>
+    <p class="section-label">Что мы предлагаем</p>
+    <h1>Наши услуги</h1>
+    <p class="page-hero__subtitle">Полный цикл обслуживания автомобиля</p>
   </div>
 </section>
 
 <section class="services-list">
   <div class="container">
-    <div class="service-card reveal">
+    <div class="service-card" id="trade-in">
       <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1200&q=80')"></div>
       <div class="service-card__content">
-        <span class="service-card__num">01</span>
         <h2>Trade-in</h2>
         <p>Обменяйте свой автомобиль на новый с доплатой или без. Бесплатная оценка за 30 минут, оформление за один день.</p>
         <ul class="service-card__list">
@@ -70,10 +74,9 @@
       </div>
     </div>
 
-    <div class="service-card service-card--reverse reveal">
+    <div class="service-card service-card--reverse" id="financing">
       <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80')"></div>
       <div class="service-card__content">
-        <span class="service-card__num">02</span>
         <h2>Кредит и лизинг</h2>
         <p>Более 15 банков-партнёров. Одобрение за 15 минут, ставка от 4.5%. Работаем с любыми категориями клиентов.</p>
         <ul class="service-card__list">
@@ -85,10 +88,9 @@
       </div>
     </div>
 
-    <div class="service-card reveal">
+    <div class="service-card" id="insurance">
       <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80')"></div>
       <div class="service-card__content">
-        <span class="service-card__num">03</span>
         <h2>Страхование</h2>
         <p>ОСАГО, КАСКО, ДСАГО от ведущих страховых компаний. Оформление прямо в салоне, без визитов в офисы.</p>
         <ul class="service-card__list">
@@ -100,10 +102,9 @@
       </div>
     </div>
 
-    <div class="service-card service-card--reverse reveal">
+    <div class="service-card service-card--reverse" id="test-drive-service">
       <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80')"></div>
       <div class="service-card__content">
-        <span class="service-card__num">04</span>
         <h2>Тест-драйв</h2>
         <p>Пройдите тест-драйв любого автомобиля из наличия. Индивидуальный маршрут, персональный менеджер, без ограничений по времени.</p>
         <ul class="service-card__list">
@@ -111,7 +112,7 @@
           <li>Индивидуальный маршрут</li>
           <li>Персональный менеджер</li>
         </ul>
-        <span class="service-card__price">Бесплатно</span>
+        <a href="contacts.html#test-drive" class="btn btn--primary">Записаться на тест-драйв</a>
       </div>
     </div>
   </div>
@@ -119,11 +120,13 @@
 
 <section class="cta">
   <div class="container cta__inner">
-    <h2 class="reveal">Нужна консультация?</h2>
-    <p class="reveal">Позвоните — подберём автомобиль и условия под вас.</p>
-    <a href="contacts.html" class="btn btn--primary reveal">Связаться</a>
+    <h2>Нужна консультация?</h2>
+    <p>Позвоните — подберём автомобиль и условия под вас.</p>
+    <a href="contacts.html" class="btn btn--primary">Связаться</a>
   </div>
 </section>
+
+</main>
 
 <footer class="footer">
   <div class="container footer__inner">
@@ -133,12 +136,12 @@
           <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
           <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
         </svg>
-        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Автосалон · Тула</span></span>
       </a>
       <p class="footer__desc">Премиальный автосалон в Туле.</p>
     </div>
     <div class="footer__col"><h4>Навигация</h4><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="services.html">Услуги</a><a href="contacts.html">Контакты</a></div>
-    <div class="footer__col"><h4>Услуги</h4><a href="services.html">Trade-in</a><a href="services.html">Кредит</a><a href="services.html">Страхование</a><a href="services.html">Тест-драйв</a></div>
+    <div class="footer__col"><h4>Услуги</h4><a href="services.html#trade-in">Trade-in</a><a href="services.html#financing">Кредит</a><a href="services.html#insurance">Страхование</a><a href="services.html#test-drive-service">Тест-драйв</a></div>
     <div class="footer__col"><h4>Контакты</h4><p>г. Тула, пр. Ленина, 100</p><p><a href="tel:+74872000000">+7 (4872) 00-00-00</a></p><p>Ежедневно 09:00–21:00</p></div>
   </div>
   <div class="footer__bottom"><p>© 2025 Prime Auto. Все права защищены.</p></div>

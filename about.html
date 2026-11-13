@@ -6,41 +6,45 @@
 <title>О компании — Prime Auto | Автосалон в Туле</title>
 <meta name="description" content="История автосалона Prime Auto в Туле. Наша миссия, команда и гарантии. Более 15 лет на рынке премиальных автомобилей.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://milenka05365.github.io/about.html">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Шапка -->
+<a href="#main-content" class="skip-link">Перейти к содержанию</a>
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo" aria-label="Prime Auto">
-      <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+      <svg class="logo__icon" aria-hidden="true" viewBox="0 0 100 100" width="42" height="42">
         <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
         <circle cx="50" cy="50" r="38" fill="none" stroke="#C8A45C" stroke-width="0.8" opacity="0.6"/>
         <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
       </svg>
       <span class="logo__text">
         <span class="logo__title">Prime Auto</span>
-        <span class="logo__subtitle">Autosalon · Тула</span>
+        <span class="logo__subtitle">Автосалон · Тула</span>
       </span>
     </a>
-    <nav class="nav" id="nav">
-  <a href="index.html" class="nav__link">Главная</a>
-  <a href="catalog.html" class="nav__link">Каталог</a>
-  <a href="services.html" class="nav__link">Услуги</a>
-  <a href="about.html" class="nav__link">О нас</a> <!-- ДОБАВИТЬ ЭТО -->
-  <a href="contacts.html" class="nav__link">Контакты</a>
-</nav>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="index.html" class="nav__link">Главная</a>
+      <a href="catalog.html" class="nav__link">Каталог</a>
+      <a href="services.html" class="nav__link">Услуги</a>
+      <a href="about.html" class="nav__link" aria-current="page">О нас</a>
+      <a href="blog.html" class="nav__link">Блог</a>
+      <a href="contacts.html" class="nav__link">Контакты</a>
+    </nav>
     <a href="tel:+74872000000" class="header__phone">+7 (4872) 00-00-00</a>
-    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main id="main-content" tabindex="-1">
+
 <section class="page-hero">
   <div class="container">
-    <p class="section-label reveal">О нас</p>
-    <h1 class="reveal">Премиальный автосалон в Туле</h1>
-    <p class="page-hero__subtitle reveal">Ваш надежный партнер в мире автомобилей</p>
+    <p class="section-label">О нас</p>
+    <h1>Премиальный автосалон в Туле</h1>
+    <p class="page-hero__subtitle">Ваш надежный партнер в мире автомобилей</p>
   </div>
 </section>
 
@@ -49,7 +53,7 @@
     <div style="max-width: 800px; margin: 0 auto;">
       <h2 style="font-family: var(--font-display); font-size: 36px; color: var(--gold); margin-bottom: 20px;">Наша история</h2>
       <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-bottom: 40px;">Автосалон Prime Auto был основан в 2010 году. За это время мы помогли более чем 1200 клиентам найти автомобиль мечты. Мы специализируемся на продаже премиальных автомобилей с пробегом и новых машин от ведущих мировых брендов.</p>
-      
+
       <h2 style="font-family: var(--font-display); font-size: 36px; color: var(--gold); margin-bottom: 20px;">Наша миссия</h2>
       <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-bottom: 40px;">Сделать покупку премиального автомобиля простой, прозрачной и безопасной. Мы проверяем каждую машину по 150 параметрам и даем гарантию юридической чистоты.</p>
 
@@ -65,6 +69,8 @@
 </section>
 
 <!-- Подвал -->
+</main>
+
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__col">
@@ -73,7 +79,7 @@
           <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
           <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
         </svg>
-        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Автосалон · Тула</span></span>
       </a>
       <p class="footer__desc">Премиальный автосалон в Туле. Более 200 автомобилей, trade-in, кредит за один день.</p>
     </div>
@@ -86,10 +92,10 @@
     </div>
     <div class="footer__col">
       <h4>Услуги</h4>
-      <a href="services.html">Trade-in</a>
-      <a href="services.html">Кредит и лизинг</a>
-      <a href="services.html">Тест-драйв</a>
-      <a href="services.html">Страхование</a>
+      <a href="services.html#trade-in">Trade-in</a>
+      <a href="services.html#financing">Кредит и лизинг</a>
+      <a href="services.html#test-drive-service">Тест-драйв</a>
+      <a href="services.html#insurance">Страхование</a>
     </div>
     <div class="footer__col">
       <h4>Контакты</h4>

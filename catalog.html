@@ -10,6 +10,7 @@
 <!-- KEYWORDS (для внутренней категоризации) -->
 <meta name="keywords" content="купить авто Тула, авто с пробегом, новые автомобили, автосалон, цены на авто, Prime Auto">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://milenka05365.github.io/catalog.html">
 <link rel="stylesheet" href="css/style.css">
 
   <!-- Yandex.Metrika counter -->
@@ -23,60 +24,82 @@
 
     ym(114107813, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
+<a href="#main-content" class="skip-link">Перейти к содержанию</a>
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo">
-      <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
+      <svg class="logo__icon" aria-hidden="true" viewBox="0 0 100 100" width="42" height="42">
         <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
         <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
       </svg>
-      <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+      <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Автосалон · Тула</span></span>
     </a>
-    <nav class="nav" id="nav">
-  <a href="index.html" class="nav__link">Главная</a>
-  <a href="catalog.html" class="nav__link">Каталог</a>
-  <a href="services.html" class="nav__link">Услуги</a>
-  <a href="about.html" class="nav__link">О нас</a> <!-- ДОБАВИТЬ ЭТО -->
-  <a href="contacts.html" class="nav__link">Контакты</a>
-</nav>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="index.html" class="nav__link">Главная</a>
+      <a href="catalog.html" class="nav__link" aria-current="page">Каталог</a>
+      <a href="services.html" class="nav__link">Услуги</a>
+      <a href="about.html" class="nav__link">О нас</a>
+      <a href="blog.html" class="nav__link">Блог</a>
+      <a href="contacts.html" class="nav__link">Контакты</a>
+    </nav>
     <a href="tel:+74872000000" class="header__phone">+7 (4872) 00-00-00</a>
-    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main id="main-content" tabindex="-1">
+
 <section class="page-hero">
   <div class="container">
-    <p class="section-label reveal">В наличии сегодня</p>
+    <p class="section-label">В наличии сегодня</p>
     <!-- ОПТИМИЗИРОВАННЫЙ H1 (убран дубль с Title, добавлен топоним) -->
-    <h1 class="reveal">Автомобили в наличии в Туле</h1>
-    <p class="page-hero__subtitle reveal">Более 200 проверенных автомобилей</p>
+    <h1>Автомобили в наличии в Туле</h1>
+    <p class="page-hero__subtitle">Более 200 проверенных автомобилей</p>
   </div>
 </section>
 
 <section class="catalog">
   <div class="container">
     <!-- Добавлен H2 для логической структуры -->
-    <h2 class="section-title reveal">Популярные модели</h2>
+    <h2 class="section-title">Популярные модели</h2>
 
-    <div class="catalog__filters reveal">
-      <button class="filter active" data-filter="all">Все</button>
-      <button class="filter" data-filter="sedan">Седаны</button>
-      <button class="filter" data-filter="suv">Кроссоверы</button>
-      <button class="filter" data-filter="sport">Спорткары</button>
-      <button class="filter" data-filter="electric">Электро</button>
+    <div class="catalog__controls" hidden>
+      <div class="catalog__fields">
+        <label>Марка или модель
+          <input id="catalog-search" type="search" placeholder="Например, BMW" autocomplete="off">
+        </label>
+        <label>Сортировка
+          <select id="catalog-sort">
+            <option value="default">По умолчанию</option>
+            <option value="price-asc">Сначала дешевле</option>
+            <option value="price-desc">Сначала дороже</option>
+          </select>
+        </label>
+      </div>
+      <div class="catalog__filters" role="group" aria-label="Тип автомобиля">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">Все</button>
+        <button type="button" class="filter" data-filter="sedan" aria-pressed="false">Седаны</button>
+        <button type="button" class="filter" data-filter="suv" aria-pressed="false">Кроссоверы</button>
+        <button type="button" class="filter" data-filter="sport" aria-pressed="false">Спорткары</button>
+        <button type="button" class="filter" data-filter="electric" aria-pressed="false">Электро</button>
+      </div>
+      <p class="catalog__count" id="catalog-count" role="status" aria-atomic="true"></p>
     </div>
+    <div class="catalog__empty" id="catalog-empty" hidden>
+      <p>Попробуйте изменить запрос или выбрать другой тип автомобиля.</p>
+      <button type="button" class="btn btn--ghost" id="catalog-reset">Сбросить фильтры</button>
+    </div>
+    <div class="catalog__grid">
 
-        <div class="catalog__grid">
-      
       <!-- Машина 1: Porsche -->
-      <article class="car reveal" data-category="sport">
+      <article class="car" id="porsche-911" data-search="порше 911 каррера" data-price="12900000" data-category="sport">
         <div class="car__img">
-          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Porsche 911 Carrera" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Porsche 911 Carrera" decoding="async">
           <span class="car__badge">Хит продаж</span>
         </div>
         <div class="car__info">
@@ -84,45 +107,45 @@
           <p class="car__specs">450 л.с. · 3.5 с · Автомат</p>
           <div class="car__footer">
             <span class="car__price">12 900 000 ₽</span>
-            <a href="contacts.html" class="car__btn">Записаться</a>
+            <a href="contacts.html?model=Porsche%20911%20Carrera#test-drive" class="car__btn" aria-label="Тест-драйв Porsche 911 Carrera">Тест-драйв</a>
           </div>
         </div>
       </article>
 
       <!-- Машина 2: BMW -->
-      <article class="car reveal" data-category="sedan">
+      <article class="car" id="bmw-5" data-search="бмв 5 серия" data-price="5400000" data-category="sedan">
         <div class="car__img">
-          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="BMW 5 Series" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="BMW 5 Series" decoding="async">
         </div>
         <div class="car__info">
           <h3>BMW 5 Series</h3>
           <p class="car__specs">249 л.с. · Полный привод · Автомат</p>
           <div class="car__footer">
             <span class="car__price">5 400 000 ₽</span>
-            <a href="contacts.html" class="car__btn">Записаться</a>
+            <a href="contacts.html?model=BMW%205%20Series#test-drive" class="car__btn" aria-label="Тест-драйв BMW 5 Series">Тест-драйв</a>
           </div>
         </div>
       </article>
 
       <!-- Машина 3: Audi -->
-      <article class="car reveal" data-category="suv">
+      <article class="car" id="audi-q7" data-search="ауди ку7 q7" data-price="7800000" data-category="suv">
         <div class="car__img">
-          <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Audi Q7" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Audi Q7" decoding="async">
         </div>
         <div class="car__info">
           <h3>Audi Q7</h3>
           <p class="car__specs">340 л.с. · Полный привод · 7 мест</p>
           <div class="car__footer">
             <span class="car__price">7 800 000 ₽</span>
-            <a href="contacts.html" class="car__btn">Записаться</a>
+            <a href="contacts.html?model=Audi%20Q7#test-drive" class="car__btn" aria-label="Тест-драйв Audi Q7">Тест-драйв</a>
           </div>
         </div>
       </article>
 
       <!-- Машина 4: Tesla -->
-      <article class="car reveal" data-category="electric">
+      <article class="car" id="tesla-model-s" data-search="тесла модел с" data-price="9500000" data-category="electric">
         <div class="car__img">
-          <img src="https://images.unsplash.com/photo-1617704548623-340376564e68?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Tesla Model S" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://images.unsplash.com/photo-1617704548623-340376564e68?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Tesla Model S" decoding="async">
           <span class="car__badge car__badge--green">Электро</span>
         </div>
         <div class="car__info">
@@ -130,37 +153,37 @@
           <p class="car__specs">670 л.с. · 3.2 с · 630 км</p>
           <div class="car__footer">
             <span class="car__price">9 500 000 ₽</span>
-            <a href="contacts.html" class="car__btn">Записаться</a>
+            <a href="contacts.html?model=Tesla%20Model%20S#test-drive" class="car__btn" aria-label="Тест-драйв Tesla Model S">Тест-драйв</a>
           </div>
         </div>
       </article>
 
       <!-- Машина 5: Mercedes -->
-      <article class="car reveal" data-category="sedan">
+      <article class="car" id="mercedes-e-class" data-search="мерседес е класс" data-price="6200000" data-category="sedan">
         <div class="car__img">
-          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Mercedes E-Class" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Mercedes E-Class" decoding="async">
         </div>
         <div class="car__info">
           <h3>Mercedes E-Class</h3>
           <p class="car__specs">249 л.с. · Задний привод · Автомат</p>
           <div class="car__footer">
             <span class="car__price">6 200 000 ₽</span>
-            <a href="contacts.html" class="car__btn">Записаться</a>
+            <a href="contacts.html?model=Mercedes%20E-Class#test-drive" class="car__btn" aria-label="Тест-драйв Mercedes E-Class">Тест-драйв</a>
           </div>
         </div>
       </article>
 
       <!-- Машина 6: Volvo -->
-      <article class="car reveal" data-category="suv">
+      <article class="car" id="volvo-xc90" data-search="вольво хс90 xc90" data-price="7100000" data-category="suv">
         <div class="car__img">
-          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Volvo XC90" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80" loading="lazy" alt="Volvo XC90" decoding="async">
         </div>
         <div class="car__info">
           <h3>Volvo XC90</h3>
           <p class="car__specs">300 л.с. · Полный привод · 7 мест</p>
           <div class="car__footer">
             <span class="car__price">7 100 000 ₽</span>
-            <a href="contacts.html" class="car__btn">Записаться</a>
+            <a href="contacts.html?model=Volvo%20XC90#test-drive" class="car__btn" aria-label="Тест-драйв Volvo XC90">Тест-драйв</a>
           </div>
         </div>
       </article>
@@ -168,7 +191,7 @@
     </div>
 
     <!-- ДОБАВЛЕН ТЕКСТОВЫЙ БЛОК (SEO-текст) -->
-    <div class="catalog__seo-text reveal" style="margin-top: 60px; padding: 40px; background: var(--bg-section); border-radius: 4px; border: 1px solid var(--border);">
+    <div class="catalog__seo-text">
       <h2 style="font-family: var(--font-display); font-size: 32px; color: var(--text); margin-bottom: 20px;">Купить авто с пробегом в Туле</h2>
       <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 16px;">В автосалоне Prime Auto представлен широкий выбор автомобилей с пробегом и новых машин. Мы предлагаем клиентам из Тулы и Тульской области лучшие условия для покупки:</p>
       <ul style="color: var(--text-muted); margin-bottom: 20px; padding-left: 20px; font-size: 16px; line-height: 1.8;">
@@ -183,6 +206,8 @@
   </div>
 </section>
 
+</main>
+
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__col">
@@ -191,17 +216,17 @@
           <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
           <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
         </svg>
-        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Autosalon · Тула</span></span>
+        <span class="logo__text"><span class="logo__title">Prime Auto</span><span class="logo__subtitle">Автосалон · Тула</span></span>
       </a>
       <p class="footer__desc">Премиальный автосалон в Туле.</p>
     </div>
     <div class="footer__col"><h4>Навигация</h4><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="services.html">Услуги</a><a href="contacts.html">Контакты</a></div>
-    <div class="footer__col"><h4>Услуги</h4><a href="services.html">Trade-in</a><a href="services.html">Кредит</a><a href="services.html">Тест-драйв</a><a href="services.html">Страхование</a></div>
+    <div class="footer__col"><h4>Услуги</h4><a href="services.html#trade-in">Trade-in</a><a href="services.html#financing">Кредит</a><a href="services.html#test-drive-service">Тест-драйв</a><a href="services.html#insurance">Страхование</a></div>
     <div class="footer__col"><h4>Контакты</h4><p>г. Тула, пр. Ленина, 100</p><p><a href="tel:+74872000000">+7 (4872) 00-00-00</a></p><p>Ежедневно 09:00–21:00</p></div>
   </div>
   <div class="footer__bottom"><p>© 2025 Prime Auto. Все права защищены.</p></div>
 </footer>
-<button id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
+<button type="button" id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
 <script src="js/script.js"></script>
 </body>
 </html>
