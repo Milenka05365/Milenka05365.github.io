@@ -6,8 +6,10 @@
 <title>Контакты — Prime Auto | Тула, пр. Ленина, 100</title>
 <meta name="description" content="Адрес автосалона Prime Auto в Туле: пр. Ленина, 100. Телефон, email, часы работы. Запишитесь на тест-драйв.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://milenka05365.github.io/contacts.html">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=20261113">
+<link rel="stylesheet" href="css/selection.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -20,26 +22,13 @@
 }
 </script>
 
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114107813', 'ym');
-
-    ym(114107813, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 <a href="#main-content" class="skip-link">Перейти к содержанию</a>
 <header class="header" id="header">
   <div class="container header__inner">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <svg class="logo__icon" aria-hidden="true" viewBox="0 0 100 100" width="42" height="42">
         <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
         <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
@@ -48,7 +37,7 @@
     </a>
     <button class="burger" id="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="index.html" class="nav__link">Главная</a>
+      <a href="/" class="nav__link">Главная</a>
       <a href="catalog.html" class="nav__link">Каталог</a>
       <a href="services.html" class="nav__link">Услуги</a>
       <a href="about.html" class="nav__link">О нас</a>
@@ -109,11 +98,19 @@
   <div class="container cta__inner">
     <h2 id="test-drive-title">Запись на тест-драйв</h2>
     <p id="test-drive-model" class="test-drive__model" hidden></p>
-    <p>Позвоните или откройте письмо в почтовом приложении, чтобы согласовать модель и время визита.</p>
+    <p id="test-drive-intro">Позвоните или откройте письмо в почтовом приложении, чтобы согласовать модель и время визита.</p>
     <div class="cta__actions">
       <a href="tel:+74872000000" class="btn btn--primary">Позвонить</a>
       <a id="test-drive-email" href="mailto:info@primeauto.ru?subject=%D0%A2%D0%B5%D1%81%D1%82-%D0%B4%D1%80%D0%B0%D0%B9%D0%B2" class="btn btn--ghost">Открыть письмо</a>
     </div>
+    <form class="utility-form request-form" id="request-form" hidden>
+      <label>Имя<input class="ym-disable-keys" name="customer" autocomplete="name" maxlength="80" required></label>
+      <label>Телефон для связи<input class="ym-disable-keys" name="phone" type="tel" autocomplete="tel" maxlength="28" required></label>
+      <label class="request-form__message"><span id="request-message-label">Удобное время или вопрос</span><textarea class="ym-disable-keys" name="message" rows="3" maxlength="500"></textarea></label>
+      <button type="submit" class="btn btn--ghost">Подготовить письмо</button>
+      <output id="request-status" aria-live="polite"></output>
+      <p class="request-form__note">Письмо откроется в вашем почтовом приложении. Проверьте его и нажмите «Отправить».</p>
+    </form>
   </div>
 </section>
 </main>
@@ -121,7 +118,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__col">
-      <a href="index.html" class="logo">
+      <a href="/" class="logo">
         <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
           <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
           <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
@@ -130,13 +127,16 @@
       </a>
       <p class="footer__desc">Премиальный автосалон в Туле.</p>
     </div>
-    <div class="footer__col"><h4>Навигация</h4><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="contacts.html">Контакты</a></div>
+    <div class="footer__col"><h4>Навигация</h4><a href="/">Главная</a><a href="services.html">Услуги</a><a href="contacts.html">Контакты</a></div>
     <div class="footer__col"><h4>Услуги</h4><a href="services.html#trade-in">Trade-in</a><a href="services.html#financing">Кредит и лизинг</a><a href="services.html#test-drive-service">Тест-драйв</a></div>
     <div class="footer__col"><h4>Контакты</h4><p>г. Тула, пр. Ленина, 100</p><p><a href="tel:+74872000000">+7 (4872) 00-00-00</a></p><p>Ежедневно 09:00–21:00</p></div>
   </div>
   <div class="footer__bottom"><p>© 2025 Prime Auto. Все права защищены.</p></div>
+  <div class="footer__links"><a href="sitemap.html">Карта сайта</a><a href="services.html#faq">Частые вопросы</a><a href="data-use.html">Использование данных</a></div>
 </footer>
 <button type="button" id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
-<script src="js/script.js"></script>
+<script src="js/script.js?v=20261113" defer></script>
+<script src="js/analytics.js" type="module"></script>
+<script src="js/requests.js" type="module"></script>
 </body>
 </html>

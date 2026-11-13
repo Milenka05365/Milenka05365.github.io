@@ -160,3 +160,15 @@ bmw-salon/
 **Версия**: 1.0
 **Последнее обновление**: 2024-10-02
 **Совместимость**: IE11+, все современные браузеры
+
+## Цели Яндекс Метрики и посадочные страницы
+
+В счётчик `114107813` код передаёт события `phone_click`, `test_drive_click`, `test_drive_draft`, `trade_in_click`, `trade_in_draft`, `view_three_cars`. Для отчётов создайте в кабинете одноимённые цели типа «Целевое событие». Событие `*_draft` означает подготовку письма, а `view_three_cars` фиксируется после открытия трёх разных карточек в одной вкладке. Форма открывает почтовое приложение посетителя, поэтому сайт не измеряет отправку или доставку письма.
+
+Посадочные ссылки для подготовки кампании:
+
+- Каталог: `https://milenka05365.github.io/catalog.html?utm_source=yandex&utm_medium=cpc&utm_campaign=prime_auto_catalog`
+- Тест-драйв: `https://milenka05365.github.io/contacts.html?utm_source=yandex&utm_medium=cpc&utm_campaign=prime_auto_test_drive#test-drive`
+- Быстрые ссылки: `catalog.html`, `services.html#financing`, `contacts.html`, `/#reviews`.
+
+В Яндекс Вебмастере используйте `https://milenka05365.github.io/sitemap.xml`. HTML-карта расположена на `/sitemap.html`.

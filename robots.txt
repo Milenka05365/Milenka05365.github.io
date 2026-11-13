@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /yandex_*.html
 
-Sitemap: https://Milenka05365.github.io/sitemap.xml
+Sitemap: https://milenka05365.github.io/sitemap.xml

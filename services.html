@@ -6,29 +6,18 @@
 <title>Услуги — Prime Auto | Trade-in, кредит, страхование</title>
 <meta name="description" content="Услуги автосалона Prime Auto в Туле: trade-in, кредит и лизинг, страхование, тест-драйв, помощь в оформлении.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://milenka05365.github.io/services.html">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=20261113">
+<link rel="stylesheet" href="css/selection.css">
 
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114107813', 'ym');
-
-    ym(114107813, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<noscript><div><img src="https://mc.yandex.ru/watch/114107813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 <a href="#main-content" class="skip-link">Перейти к содержанию</a>
 <header class="header" id="header">
   <div class="container header__inner">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <svg class="logo__icon" aria-hidden="true" viewBox="0 0 100 100" width="42" height="42">
         <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
         <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
@@ -37,7 +26,7 @@
     </a>
     <button class="burger" id="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="index.html" class="nav__link">Главная</a>
+      <a href="/" class="nav__link">Главная</a>
       <a href="catalog.html" class="nav__link">Каталог</a>
       <a href="services.html" class="nav__link" aria-current="page">Услуги</a>
       <a href="about.html" class="nav__link">О нас</a>
@@ -70,7 +59,7 @@
           <li>Оформление за один день</li>
           <li>Доплата или выплата разницы</li>
         </ul>
-        <span class="service-card__price">Бесплатно</span>
+        <a href="contacts.html?request=trade-in#test-drive" class="btn btn--ghost">Запросить оценку</a>
       </div>
     </div>
 
@@ -78,13 +67,13 @@
       <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80')"></div>
       <div class="service-card__content">
         <h2>Кредит и лизинг</h2>
-        <p>Более 15 банков-партнёров. Одобрение за 15 минут, ставка от 4.5%. Работаем с любыми категориями клиентов.</p>
+        <p>Уточните условия кредита или лизинга для выбранной модели. Для предварительной оценки платежа воспользуйтесь калькулятором.</p>
         <ul class="service-card__list">
           <li>Одобрение за 15 минут</li>
           <li>Ставка от 4.5%</li>
           <li>Без первоначального взноса</li>
         </ul>
-        <span class="service-card__price">от 4.5% годовых</span>
+        <a href="#credit-calculator" class="btn btn--ghost">Рассчитать платёж</a>
       </div>
     </div>
 
@@ -118,6 +107,42 @@
   </div>
 </section>
 
+<section class="purchase-info">
+  <div class="container purchase-info__grid">
+    <div id="payment">
+      <h2>Оплата автомобиля</h2>
+      <p>Перед покупкой уточните полную стоимость, доступные способы расчёта и сроки оформления. Для покупки в кредит запросите у салона индивидуальный расчёт. При обмене стоимость вашего автомобиля засчитывается после оценки.</p>
+    </div>
+    <div id="warranty">
+      <h2>Гарантия</h2>
+      <p>Условия гарантии зависят от автомобиля. Перед покупкой запросите условия в письменном виде и уточните срок, ограничения по пробегу и перечень покрываемых работ.</p>
+    </div>
+  </div>
+</section>
+<section class="calculator" id="credit-calculator">
+  <div class="container">
+    <h2 class="section-title">Калькулятор автокредита</h2>
+    <p>Введите параметры предложения банка, чтобы оценить ежемесячный платёж. Расчёт без комиссий и страховки.</p>
+    <form id="credit-form" class="utility-form" hidden>
+      <label>Стоимость автомобиля, ₽<input name="price" type="number" min="1" max="1000000000" value="5400000" required></label>
+      <label>Первоначальный взнос, ₽<input name="deposit" type="number" min="0" max="1000000000" value="0" required></label>
+      <label>Срок, месяцев<input name="months" type="number" min="1" max="120" value="36" required></label>
+      <label>Годовая ставка, %<input name="rate" type="number" min="0" max="100" step="0.01" placeholder="Ставка банка" required></label>
+      <button class="btn btn--primary" type="submit">Рассчитать платёж</button>
+      <output id="credit-result" aria-live="polite"></output>
+    </form>
+  </div>
+</section>
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="section-title">Частые вопросы</h2>
+    <details><summary>Как записаться на тест-драйв?</summary><p><a href="catalog.html">Выберите модель в каталоге</a> или <a href="contacts.html#test-drive">свяжитесь с салоном</a>, чтобы согласовать визит.</p></details>
+    <details><summary>Что понадобится для оценки по trade-in?</summary><p>Сообщите марку, модель, год выпуска и пробег автомобиля. Перечень документов и время осмотра уточните при <a href="contacts.html?request=trade-in#test-drive">запросе оценки</a>.</p></details>
+    <details><summary>Как узнать, есть ли автомобиль в наличии?</summary><p>Откройте карточку модели и укажите её в письме салону. Заодно можно запросить год выпуска, пробег и комплектацию.</p></details>
+    <details><summary>Можно ли рассчитать платёж заранее?</summary><p>Да. Укажите стоимость, взнос, срок и ставку в <a href="#credit-calculator">калькуляторе автокредита</a>. Итоговые условия уточните у банка.</p></details>
+  </div>
+</section>
+
 <section class="cta">
   <div class="container cta__inner">
     <h2>Нужна консультация?</h2>
@@ -131,7 +156,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__col">
-      <a href="index.html" class="logo">
+      <a href="/" class="logo">
         <svg class="logo__icon" viewBox="0 0 100 100" width="42" height="42">
           <circle cx="50" cy="50" r="46" fill="none" stroke="#C8A45C" stroke-width="2.5"/>
           <path d="M32 38 L50 28 L68 38 L68 62 L50 72 L32 62 Z" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linejoin="round"/>
@@ -140,13 +165,16 @@
       </a>
       <p class="footer__desc">Премиальный автосалон в Туле.</p>
     </div>
-    <div class="footer__col"><h4>Навигация</h4><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="services.html">Услуги</a><a href="contacts.html">Контакты</a></div>
+    <div class="footer__col"><h4>Навигация</h4><a href="/">Главная</a><a href="catalog.html">Каталог</a><a href="services.html">Услуги</a><a href="contacts.html">Контакты</a></div>
     <div class="footer__col"><h4>Услуги</h4><a href="services.html#trade-in">Trade-in</a><a href="services.html#financing">Кредит</a><a href="services.html#insurance">Страхование</a><a href="services.html#test-drive-service">Тест-драйв</a></div>
     <div class="footer__col"><h4>Контакты</h4><p>г. Тула, пр. Ленина, 100</p><p><a href="tel:+74872000000">+7 (4872) 00-00-00</a></p><p>Ежедневно 09:00–21:00</p></div>
   </div>
   <div class="footer__bottom"><p>© 2025 Prime Auto. Все права защищены.</p></div>
+  <div class="footer__links"><a href="sitemap.html">Карта сайта</a><a href="services.html#faq">Частые вопросы</a><a href="data-use.html">Использование данных</a></div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=20261113" defer></script>
+<script src="js/analytics.js" type="module"></script>
+<script src="js/calculator.js" type="module"></script>
 </body>
 </html>
